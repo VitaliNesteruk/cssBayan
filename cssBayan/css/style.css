@@ -1,12 +1,29 @@
 body {
-    background-color: #ffffff;
+    background-color: lightgray;
     font-family: 'Segoe UI';
 }
 
-header {
-    
+.container {
+    width: 1440px;
+    padding: 0 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
 }
 
-main {
+.image {
+    display: flex;
+    justify-content: center;
+}
 
+h2 {
+    padding: 0.4em 0;
+    color: blue;
+}
+h2:hover {
+    color:black;
+}
+
+img {
+    width: 700px;
 }
