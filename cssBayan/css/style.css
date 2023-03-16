@@ -12,12 +12,7 @@ body {
 }
 
 input {
-    opacity: 1;
-}
-
-.title {
-    display: flex;
-    justify-content:flex-start;
+    display: none;
 }
 
 .accordion-button {
@@ -26,6 +21,7 @@ input {
     align-items: center;
     justify-content: space-between;
     flex-grow: 1;
+    overflow: hidden;
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 1.0);
 }
 
@@ -40,25 +36,54 @@ input {
     transform: rotate(45deg);
 }
 
+.accordion-button:hover + .accordion-content {
+    opacity: 1;
+    overflow: visible;
+    max-height: 100%;
+}
+
+.accordion-button:hover + .accordion-content img {
+    scale: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+.accordion-content:hover img{
+    opacity: 1;
+    max-height: 100%;
+    cursor: pointer;
+    scale: 1;
+}
+.accordion-content:hover {
+    opacity: 1;
+    max-height: 100%;
+    cursor: pointer;   
+}
+
 .accordion-content {
     display: flex;
     justify-content: center;
     max-height: 0;
-    transition: all 0.5s ease-in-out;
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 1.0);
 }
 
-.accordion-button:hover + .accordion-content{
-    opacity: 1;
+.accordion-content img {
+    width: 500px;
+    scale: 0.3;
 }
 
-input:checked ~ .accordion-content {
-    max-height: 500px;
+.accordion input:checked ~ .accordion-content {
+    max-height: 100%;
     opacity: 1;
     cursor: pointer;
     overflow: hidden;
+    scale: 1;
+}
+
+.accordion input:checked ~ .accordion-content img {
+    scale: 1;
+    transition: all 0.5s ease-in-out;
 }
 
 h2 {
@@ -69,7 +94,5 @@ h2 {
     color:black;
 }
 
-img {
-    width: 500px;
-}
+
 
