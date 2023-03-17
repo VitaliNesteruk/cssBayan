@@ -32,19 +32,18 @@ input {
     font-weight: 500;
 }
 
-.accordion-button:hover span {
+.accordion:hover span {
     transform: rotate(45deg);
 }
 
-.accordion-button:hover + .accordion-content {
+.accordion:hover .accordion-content {
     opacity: 1;
     overflow: visible;
     max-height: 100%;
 }
 
-.accordion-button:hover + .accordion-content img {
+.accordion:hover .accordion-content img {
     scale: 1;
-    transition: all 0.5s ease-in-out;
 }
 
 .accordion-content:hover img{
@@ -71,6 +70,7 @@ input {
 .accordion-content img {
     width: 500px;
     scale: 0.3;
+    transition: all 0.5s ease-in-out;
 }
 
 .accordion input:checked ~ .accordion-content {

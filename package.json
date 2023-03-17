@@ -1,0 +1,22 @@
+{
+  "name": "cssbayan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass sass/main.scss css/main.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VitaliNesteruk/cssBayan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VitaliNesteruk/cssBayan/issues"
+  },
+  "homepage": "https://github.com/VitaliNesteruk/cssBayan#readme",
+  "devDependencies": {
+    "sass": "^1.59.3"
+  }
+}
